@@ -174,7 +174,7 @@ html {
     position: relative;
     margin-top: 46px;
     padding-top: 50%;
-    background: url(/HTML-CSS/TheBand/assets/img/slider/img_la.jpg) top center / cover no-repeat;
+    background: url(/html-css/TheBand/assets/img/slider/img_la.jpg) top center / cover no-repeat;
 }
 
 #slider .text-content {
@@ -203,6 +203,11 @@ html {
     padding: 64px 0 112px;
     margin-left: auto;
     margin-right: auto;
+    /* reponsive tablet*/
+    max-width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+    /* --------------- */
 }
 
 #content .section-heading {
