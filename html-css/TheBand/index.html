@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/CSS/style.css">
+    <link rel="stylesheet" href="./assets/CSS/reponsive.css">
     <link rel="stylesheet" href="./assets/fonts/themify-icons-font/themify-icons/themify-icons.css">
     <title>The Band</title>
     <link rel="icon" type="image/x-icon" href="./assets/img/icon/SeekPng.com_rock-band-png_3249405.png">
@@ -50,6 +51,10 @@
             <!-- begin search button -->
             <div class="search-btn">
                 <i class="search-icon ti-search"></i>
+            </div>
+
+            <div id="mobile-menu" class="mobile-menu-btn">
+                <i class="menu-icon ti-menu"></i>
             </div>
             <!-- end search button -->
         </div>
@@ -272,6 +277,19 @@
             </footer>
         </div>
     </div>
+
+    <script>
+        var header = document.getElementById('header');
+        var mobileMenu = document.getElementById('mobile-menu');
+        mobileMenu.onclick = function(){
+            var isClosed = header.clientHeight === 46;
+            if (isClosed) {
+                header.style.height = 'auto';
+            } else {
+                header.style.height = null;
+            }
+        }
+    </script>
 
     <script>
         const buyBtns = document.querySelectorAll('.js-buy-ticket')
