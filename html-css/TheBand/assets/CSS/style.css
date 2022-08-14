@@ -64,6 +64,11 @@
 .pul-right {
     float: right !important;
 }
+
+.text-center {
+    justify-content: center;
+    text-align: center;
+}
 /* cac cau hoi can co khi xay dung trang web
 - vi tri
 - kich thuoc
@@ -251,7 +256,7 @@ html {
 }
 
 #content .members-list {
-    margin-top: 48px;
+    margin-top: 32px;
     overflow: hidden;
 }
 
@@ -312,7 +317,7 @@ html {
     /* margin-top: 32px;
     margin-left: -8px;
     margin-right: -8px; */
-    margin-top: 32px;
+    margin-top: 16px;
 }
 
 .places-item {
