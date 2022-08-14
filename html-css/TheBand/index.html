@@ -26,9 +26,9 @@
                 <li>
                     <a href="#contact">Contact</a>
                     <ul class="subnav">
-                        <li><a href="">Test1</a></li>
-                        <li><a href="">Test2</a></li>
-                        <li><a href="">Test3</a></li>
+                        <li><a href="#">Test1</a></li>
+                        <li><a href="#">Test2</a></li>
+                        <li><a href="#">Test3</a></li>
                     </ul>
                 </li>
 
@@ -39,9 +39,9 @@
                     </a>
 
                     <ul class="subnav">
-                        <li><a href="">Merchandise</a></li>
-                        <li><a href="">Extras</a></li>
-                        <li><a href="">Media</a></li>
+                        <li><a href="#">Merchandise</a></li>
+                        <li><a href="#">Extras</a></li>
+                        <li><a href="#">Media</a></li>
                     </ul>
 
                 </li>
@@ -278,15 +278,32 @@
         </div>
     </div>
 
+
     <script>
+        // open menu
         var header = document.getElementById('header');
         var mobileMenu = document.getElementById('mobile-menu');
-        mobileMenu.onclick = function(){
+        mobileMenu.onclick = function () {
             var isClosed = header.clientHeight === 46;
             if (isClosed) {
                 header.style.height = 'auto';
             } else {
                 header.style.height = null;
+            }
+        }
+
+        // tự động đóng khi chọn menu
+        var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+        for (var i = 0; i < menuItems.length; i++) {
+            var menuItem = menuItems[i];
+
+            menuItem.onclick = function (event) {
+                var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+                if (isParentMenu) {
+                    event.preventDefault();
+                } else {
+                    header.style.height = null;
+                }
             }
         }
     </script>
@@ -325,4 +342,3 @@
 </body>
 
 </html>
-
